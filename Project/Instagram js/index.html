@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Instagram.com</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+  <link rel="stylesheet" href="log_sign_folder/log_sign.css" />
+  <link rel="stylesheet" href="log_sign_folder/log_sign_res.css" />
+  <link rel="stylesheet" href="navbar/css/NavBar.css" />
+  <link rel="stylesheet" href="home/home.css" />
+  <link rel="stylesheet" href="/suggest/css/suggest.css" />
+  <link rel="stylesheet" href="create/create.css" />
+  <link rel="stylesheet" href="/profile/profile.css" />
+  <link rel="stylesheet" href="/search/search.css" />
+</head>
+
+<body>
+  <div class="container log_sign_cont mt-5" id="log_sign_cont">
+    <!-- Iphone Images Scroll -->
+    <div class="container-fluid mob_img me-1 ms-0">
+      <div class="mob_imgg" id="mob_img1">
+        <img src="/log_sign_folder/Log-sign/screenshot1.png" alt="" style="height: 489px; width: 250px" />
+      </div>
+      <div class="mob_imgg" id="mob_img2">
+        <img src="/log_sign_folder/Log-sign/screenshot2.png" alt="" style="height: 489px; width: 250px" />
+      </div>
+      <div class="mob_imgg" id="mob_img3">
+        <img src="/log_sign_folder/Log-sign/screenshot3.png" alt="" style="height: 489px; width: 250px" />
+      </div>
+      <div class="mob_imgg" id="mob_img4">
+        <img src="/log_sign_folder/Log-sign/screenshot4.png" alt="" style="height: 489px; width: 250px" />
+      </div>
+    </div>
+    <!-- Login Section -->
+    <div class="container-fluid login_section ms-1 me-0">
+      <div class="container sub_login_sec">
+        <div class="text_logo py-4">
+          <img src="/log_sign_folder/Log-sign/logo.png" alt="" />
+        </div>
+        <div class="email_pas">
+          <div class="mb-2 email">
+            <input type="email" class="form-control" id="LoginFormControlInput1"
+              placeholder="Phone number, Username, Email" style="
+                  font-size: 12px;
+                  width: 250px;
+                  border-radius: 3px;
+                  background-color: rgb(245, 245, 245, 1);
+                " />
+          </div>
+          <div class="mb-3 password">
+            <input type="password" class="form-control" id="LogininputPassword" placeholder="Password" style="
+                  font-size: 12px;
+                  width: 250px;
+                  border-radius: 3px;
+                  background-color: rgb(245, 245, 245, 1);
+                " />
+          </div>
+          <div class="log_sign_btn">
+            <button class="btn btn-primary" id="logBtn" onclick="logInNow()" type="button" style="
+                  background-color: #4cb5f9;
+                  width: 250px;
+                  height: 32px;
+                  font-size: 14px;
+                  border: none;
+                ">
+              Log in
+            </button>
+          </div>
+        </div>
+        <div class="or_dash my-4">
+          <div class="dash"></div>
+          <div class="or">
+            <p>OR</p>
+          </div>
+          <div class="dash"></div>
+        </div>
+        <div class="log_face mb-2">
+          <div class="facebook_logo">
+            <img src="/log_sign_folder/Log-sign/facebook.png" alt="" style="width: 16px" />
+          </div>
+          <div class="log_text">
+            <a href="#" style="
+                  color: #4d6fa9;
+                  text-decoration: none;
+                  font-size: 14px;
+                  font-weight: 600;
+                ">Log in with Facebook</a>
+          </div>
+        </div>
+        <div class="forget_pas mb-2">
+          <a href="#" style="
+                font-weight: 400;
+                font-size: 12px;
+                color: #00376b;
+                text-decoration: none;
+              ">Forget password?</a>
+        </div>
+      </div>
+      <div class="container sign_p">
+        <span>
+          <p>Don't have an account?</p>
+        </span>
+        <span><a href="#" onclick="replaceLogIn()">Sign Up</a></span>
+      </div>
+      <div class="container get_app mt-3">
+        <p>Get the app.</p>
+        <div class="down_app">
+          <img src="/log_sign_folder/Log-sign/play_store.png" alt="" style="width: 134px" />
+          <img src="/log_sign_folder/Log-sign/micro_soft.png" alt="" style="width: 105px" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sign Up Form -->
+
+  <div class="container" id="signIn">
+    <div class="container sub_signin_sec my-4">
+      <div class="text_logo py-4">
+        <img src="/log_sign_folder/Log-sign/logo.png" alt="" />
+      </div>
+      <div class="sigin_para1">
+        <p style="color: #737373; font-size: 17px; font-weight: 600">
+          Sign up to see photos and videos from your friends.
+        </p>
+      </div>
+      <div class="log_sign_btn">
+        <button class="btn btn-primary" type="button" style="
+              background-color: #1877f2;
+              width: 250px;
+              height: 32px;
+              font-size: 14px;
+              border: none;
+            ">
+          Login With Facebook
+        </button>
+      </div>
+      <div class="or_dash my-4">
+        <div class="dash"></div>
+        <div class="or">
+          <p>OR</p>
+        </div>
+        <div class="dash"></div>
+      </div>
+      <div class="email_pas">
+        <div class="mb-2 email">
+          <input type="email" class="form-control" id="signFormControlInput1" placeholder=" Email" style="
+                font-size: 12px;
+                width: 250px;
+                border-radius: 3px;
+                background-color: rgb(245, 245, 245, 1);
+              " />
+        </div>
+        <div class="mb-2 fullName">
+          <input type="text" class="form-control" id="signFormControlInput2" placeholder="Phone number" style="
+                font-size: 12px;
+                width: 250px;
+                border-radius: 3px;
+                background-color: rgb(245, 245, 245, 1);
+              " />
+        </div>
+        <div class="mb-2 userName">
+          <input type="text" class="form-control" id="signFormControlInput3" placeholder="Username" style="
+                font-size: 12px;
+                width: 250px;
+                border-radius: 3px;
+                background-color: rgb(245, 245, 245, 1);
+              " />
+        </div>
+        <div class="mb-3 password">
+          <input type="password" class="form-control" id="signPassword" placeholder="Password" style="
+                font-size: 12px;
+                width: 250px;
+                border-radius: 3px;
+                background-color: rgb(245, 245, 245, 1);
+              " />
+        </div>
+        <div class="sigin_para">
+          <p>
+            People who use our service may have uploaded your contact
+            information to Instagram. <a href="#">Learn More</a>
+          </p>
+        </div>
+        <div class="sigin_para">
+          <p>
+            By signing up, you agree to our <a href="#">Terms</a> ,<a href="#">Privacy Policy</a>
+            and <a href="#">Cookies Policy</a>.
+          </p>
+        </div>
+        <div class="log_sign_btn">
+          <button class="btn btn-primary" onclick="moveNext()" type="button" style="
+                background-color: #4cb5f9;
+                width: 250px;
+                height: 32px;
+                font-size: 14px;
+                border: none;
+              ">
+            Move Next
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="container log_p">
+      <span>
+        <p>Have an account?</p>
+      </span>
+      <span><a href="#" onclick="replaceSign()" style="font-weight: 600">Login</a></span>
+    </div>
+    <div class="container get_app mt-3">
+      <p>Get the app.</p>
+      <div class="down_app my-3">
+        <img src="/log_sign_folder/Log-sign/play_store.png" alt="" style="width: 134px" />
+        <img src="/log_sign_folder/Log-sign/micro_soft.png" alt="" style="width: 105px" />
+      </div>
+    </div>
+  </div>
+
+  <div class="container up_p_img my-4 py-3" id="up_p_img">
+    <div class="text_logo py-4">
+      <img src="/log_sign_folder/Log-sign/logo.png" alt="" />
+    </div>
+    <div class="sigin_para1">
+      <p style="color: #737373; font-size: 17px; font-weight: 600">
+        Upload Your Image to Make Your Profile Best
+      </p>
+    </div>
+    <div class="inp_img" id="inp_img">
+      <label for="ch_file" style="cursor: pointer; border: 0.5px dotted black; padding: 3px">Upload Image</label>
+      <input type="file" accept=".jpg, .png, .jpeg, .jfif" name="ch_file" id="ch_file" />
+    </div>
+    <div class="p_image my-3">
+      <img src="/log_sign_folder/Log-sign/default.png" alt="" id="up_img" />
+    </div>
+    <div class="log_sign_btn">
+      <button class="btn btn-primary" onclick="signInNow()" type="button" style="
+            background-color: #4cb5f9;
+            width: 250px;
+            height: 32px;
+            font-size: 14px;
+            border: none;
+          ">
+        Sign Up
+      </button>
+    </div>
+  </div>
+
+  <!-- Main Section -->
+
+  <div class="container-fluid main_sec" id="main_sec">
+    <!-- Side Navbar  -->
+
+    <div class="container side_nav" id="side_nav">
+      <div class="nav_logo">
+        <img src="/navbar/img/logo.png" alt="" />
+      </div>
+      <div class="nav_lis">
+        <ul>
+          <li id="home_li" onclick="homeDis()">
+            <i class="bi bi-house-door"></i>Home
+          </li>
+          <li id="search_li" onclick="searchMe()">
+            <i class="bi bi-search"></i>Search
+          </li>
+          <li id="message_li"><i class="bi bi-messenger"></i>Message</li>
+          <li id="create_li" onclick="createMe()">
+            <i class="bi bi-plus-circle-fill"></i>Create
+          </li>
+          <li id="profile_li" onclick="profDis()">
+            <i class="bi bi-person-circle"></i>Profile
+          </li>
+        </ul>
+      </div>
+      <div class="nav_logout">
+        <li id="logout" onclick="logOut()">
+          <i class="bi bi-box-arrow-in-right"></i>Logout
+        </li>
+      </div>
+    </div>
+
+    <!-- Home -->
+    <div class="home" id="home"></div>
+
+    <!-- profile -->
+
+    <div class="profile" id="profile">
+      <div id="sub_profile">
+        <div class="profEdImg" id="profEdImg">
+          <img src="#" alt="" id="prof_img" />
+        </div>
+        <div id="profNFB">
+          <div id="edProfileText">
+            <h2 id="prof_useName"></h2>
+            <button onclick="editMyProf()">Edit Profile</button>
+          </div>
+          <div id="pFfdiv">
+            <p><span id="posts"></span> Posts</p>
+            <p><span id="followers"></span> Followers</p>
+            <p><span id="following"></span>Following</p>
+          </div>
+        </div>
+      </div>
+      <div id="your_images"></div>
+
+      <div id="edit_prof">
+        <h6>Edit Your Profile</h6>
+        <div id="img_edit">
+          <label id="ed_label" for="ei_file" style="cursor: pointer; border: 0.5px dotted black; padding: 3px">Update
+            Image</label>
+          <input type="file" accept=".jpg, .png, .jpeg, .jfif" name="ei_file" id="ei_file" />
+          <img src="/log_sign_folder/Log-sign/default.png" alt="" id="ed_img" />
+        </div>
+        <div class="upMyInp">
+          <input type="text" id="updateUser" placeholder="Update Your User Name:" />
+        </div>
+        <div class="upMyInp">
+          <input type="text" id="updatePhone" placeholder="Update Your Phone Number:" />
+        </div>
+        <div class="upMyInp">
+          <input type="email" id="updateEmail" placeholder="Update Your Email:" />
+        </div>
+        <div class="upMyBtn">
+          <button id="upBtn" onclick="UpdateProfile()">Update Now</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Suggest for you -->
+    <div class="suggest"></div>
+
+    <!-- create -->
+
+    <div class="create" id="create">
+      <p>Create Your Post Here</p>
+      <label for="cr_file" style="
+            background: #0095f6;
+            color: white;
+            cursor: pointer;
+            border: 0.5px solid white;
+            border-radius: 20px;
+            padding: 10px;
+          ">Upload Images</label>
+      <input type="file" name="cr_file" id="cr_file" />
+      <div class="cr_image my-3">
+        <img src="" alt="" id="cr_img" />
+      </div>
+      <input type="text" name="" id="post_id" placeholder="Enter Post Title" />
+      <input type="text" name="" id="description_id" placeholder="Enter Post Description" />
+      <button class="btn btn-primary" onclick="createNone()" type="button" style="
+            background-color: #4cb5f9;
+            width: 200px;
+            height: 32px;
+            font-size: 14px;
+            border: none;
+            margin-top: 20px;
+          ">
+        Submit
+      </button>
+    </div>
+
+    <!-- search Bar -->
+
+    <div id="search_container">
+      <div id="search_bar">
+        <h2>Search</h2>
+        <input type="search" name="" id="searchBar" placeholder="Search Here" />
+      </div>
+      <div id="search_result"></div>
+    </div>
+  </div>
+</body>
+<script src="/script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+  integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"
+  integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa" crossorigin="anonymous"></script>
+
+</html>

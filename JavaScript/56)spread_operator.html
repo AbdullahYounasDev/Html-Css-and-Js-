@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // spread operator:allows us to quickly copy all or part of an existing array or object into another array or object.
+
+    let arr = [23, 34, 45];
+
+    // to convert array to object
+    let obj = { ...arr };
+    console.log(obj);
+
+    // let say we have function which take three arguments and add them so:
+
+    let hi = (v1, v2, v3) => {
+        return v1 + v2 + v3;
+    }
+    console.log(hi(...arr));
+
+    // thing which you need to learn for react
+    let obj1 = {
+        name: "Ali",
+        class: "5th",
+        age: "9"
+    };
+    console.log({ ...obj1 });
+    // but let say i like to change name and age of obj1 so:
+    console.log({ ...obj1, name: "Abdullah", age: "12" });
+    // but don't write it like this as changing of name and age can't affect obj1
+    console.log({ name: "Abdullah", age: "12", ...obj1 });
+</script>
+
+</html>

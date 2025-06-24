@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <h2>Form With DOM</h2>
+        <input type="email" name="" id="ema" placeholder="Email" required><br><br>
+        <input type="number" name="" id="num" placeholder="Age" required><br><br>
+        <input type="password" name="" id="pas" placeholder="Pasword" required><br><br>
+        <input type="submit" value="Submit" id="sub">
+    </form>
+
+
+    <script>
+        var email = document.getElementById("ema");
+        var num = document.getElementById("num");
+        var pasword = document.getElementById("pas");
+        var submit = document.getElementById("sub");
+
+        submit.onclick = function()
+        {
+            // if(email.value !="" && pasword.value !="" && num.value !="")
+            // {
+            //     document.write("Success");
+            // }
+            if(num.value>=18 && num.value<=40){
+                document.write("Success");
+            }
+        }
+        
+    </script>
+</body>
+</html>

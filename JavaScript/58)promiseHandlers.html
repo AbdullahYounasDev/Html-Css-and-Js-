@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    let p1 = new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve(2)
+        }, 2000);
+    })
+    // these are handlers
+    p1.then((value) => {
+        console.log("I am Abdullah")
+    })
+    p1.then((value) => {
+        console.log("Hello")
+    })
+</script>
+
+</html>

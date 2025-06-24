@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    const weatherCheck = async () => {
+        let wazirabad = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                resolve("27deg")
+            }, 3000)
+        })
+        let gujrat = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                resolve("13deg")
+            }, 6000)
+        })
+        console.log("Wazirabad Weather is Fetching:")
+        let wazWeather = await wazirabad;
+        console.log("Waz Weather is :" + wazWeather)
+
+        console.log("Gujrat Weather is Fetching:")
+        let gujratWeather = await gujrat;
+        console.log("Gujrat Weather is :" + gujratWeather)
+
+        return [wazWeather, gujratWeather]
+    }
+    let a = weatherCheck();
+    a.then((val) => {
+        console.log(val)
+    }).catch((error) => {
+        console.log(error)
+    })
+
+
+
+    // async function weather() {
+    //     let delhiWeather = new Promise((resolve, reject) => {
+    //         setTimeout(() => {
+    //             resolve("27 Deg")
+    //         }, 1000)
+    //     })
+    //     let bangaloreWeather = new Promise((resolve, reject) => {
+    //         setTimeout(() => {
+    //             resolve("21 Deg")
+    //         }, 2000)
+    //     })
+    //     // delhiWeather.then(alert);
+    //     // bangaloreWeather.then(alert);
+    //     // better way
+    //     let dehli = await delhiWeather
+    //     let banglore = await bangaloreWeather
+    //     console.log([dehli, banglore])
+    // } weather();
+</script>
+
+</html>

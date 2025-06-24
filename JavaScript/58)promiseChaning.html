@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // Promise Chaining :
+
+    // let p1 = new Promise((resolve, reject) => {
+    //     resolve("I am in Pending")
+    // })
+    // p1.then((value) => {
+    //     console.log(value)
+    //     return new Promise((resolve, reject) => {
+    //         setTimeout(() => {
+    //             resolve("I am resolved")
+    //         }, 3000);
+    //     })
+    // }).then((value) => {
+    //     console.log(value)
+    // })
+
+    // LoadScript Function Using Promise
+    const LoadScript = (src) => {
+        return new Promise((resolve, reject) => {
+            let script = document.createElement("script");
+            script.type = "text/javascript"
+            script.src = src;
+            document.body.append(script);
+            script.onload = () => {
+                resolve("Script Resolved")
+            }
+            script.onerror = () => {
+                reject("Script Cant Load")
+            }
+        })
+    }
+    let l1 = LoadScript("https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js")
+    l1.then((value) => {
+        console.log(value)
+        return "Hello I am Second"
+    }).then((value) => {
+        console.log(value)
+    }).catch((error) => {
+        console.log(error)
+    })
+</script>
+
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+        <div id="elm1">a</div>
+        <div id="elm2">b</div>
+        <div id="elm3">c</div>
+  
+    </div>
+
+
+    <script>
+          var a = document.createElement("a");
+          a.href="facebook.com";
+          a.textContent = "Welcome";
+        var elm2 = document.getElementById("elm2");
+        // document.getElementById("container").insertBefore(a, elm2);
+        // document.getElementById("container").removeChild(elm2);
+        document.getElementById("container").replaceChild(a, elm2);
+    </script>
+</body>
+</html>

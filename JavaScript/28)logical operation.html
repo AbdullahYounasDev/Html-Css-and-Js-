@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <button id="hi">Enter ME</button>
+
+    <script>
+
+        /*
+        Logical Operators
+        1) AND "&&"
+        2) OR "||"
+        3) NOT "!"
+        
+        */
+
+        var hi = document.getElementById("hi");
+        hi.onclick = function () {
+            var a = prompt("Enter Your No.", "e.g. 1,2,3");
+            var b = prompt("Enter Your No.", "e.g. 1,2,3");
+            // if(a>=0 || b>=0)
+            if (a >= 0 && b >= 0) {
+                if (a > b) {
+                    alert("Your first digit is greater than second");
+                }
+                else {
+                    alert("Your second digit is greater than first")
+                }
+            }
+            else {
+                alert("Murja lantiya");
+            }
+        }
+    </script>
+</body>
+
+</html>

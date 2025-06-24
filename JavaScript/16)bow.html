@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="bi">Open Window</button>
+    <button onclick="closeWindow()">Close Window</button>
+
+    <script>
+        // document.write(window.innerHeight +" | "+ window.innerWidth)
+        
+        var b = document.getElementById("bi");
+        b.onclick = function()
+        {
+        // var a = window.open(" ", "alert", "width=400px,height=400px");
+        // a.document.write("Hi New Window" + a.name)
+        var a = window.open("https://www.facebook.com", " " ,"width=400px,height=400px");
+        }
+        function closeWindow()
+        {
+            window.close();
+        }
+
+    </script>
+</body>
+</html>

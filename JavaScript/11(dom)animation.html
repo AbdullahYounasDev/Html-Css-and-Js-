@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <button id="btn">Click ME</button>
+    <div id="hi">BOX</div>
+    
+
+    <script>
+        var btn =document.getElementById("btn");
+        var hi=document.getElementById("hi");
+        hi.style.height="300px";
+        hi.style.width="300px";
+        hi.style.background="red";
+        hi.style.transition="2s ease all";
+
+        hi.onclick = function()
+        {
+            hi.style.transform +="scale(2)";
+        }
+
+        btn.onclick = function()
+        {
+            hi.style.transform= "translate(1000px)";
+        }
+
+    </script>
+</body>
+</html>

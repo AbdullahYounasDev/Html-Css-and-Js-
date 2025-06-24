@@ -1,0 +1,11 @@
+1.Datatypes✔ 2.String+Methods✔
+3.Conditionals✔ 4.Loops✔
+5.Functions✔ 6.Arrow Functions✔
++How Lexical This work in Arrow function✔
+7.Events✔ 8.Handling Events✔
+9.Spread Operator✔ 10. D-structchring✔
+11.Named Imports 12.Default Imports 
++How to import js objects from one module to another 
+13.Named exports 14 .Default exports
+15.Call back 16.Promises
+17.Async/Await 18.Map+Filter+Reduce 

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    let c = {
+        name: "Abdullah",
+        age: 18,
+        exp: "JS Developer",
+        show: function () {
+            let that = this;
+            // ...In this function "this" syntax is refer object c and all of its attributes
+            // console.log("He is" + this.name, "And He is"+ this.age);    ---> you may write like this
+            // console.log(`He is ${this.name} And He is ${this.age}`);    --->may be like this
+
+            // event inside show function
+            setTimeout(function () {
+                //  ...but if we use event inside function then "this" refer the element which access the event we use e.g in this case window
+                // console.log(that);
+                // to avoid all of these we store "this" in new variable in show function
+                console.log(`He is ${that.name} And He is ${that.age}`);
+            }, 2000);
+            // but to avoid all of these we use arrow function in 53)arrow function.html
+        }
+    }
+    c.show();
+</script>
+
+</html>

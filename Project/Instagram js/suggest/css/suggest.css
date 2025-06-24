@@ -1,0 +1,9 @@
+.suggest{
+    width: 25%;
+    min-height: 100vh;
+    border-left: 1px solid #DBDBDB;
+    padding: 20px;
+    position: sticky;
+    bottom: 0;
+    top: 0;
+}

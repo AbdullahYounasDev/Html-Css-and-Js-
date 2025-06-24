@@ -1,0 +1,27 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body> </body>
+  <script>
+    //  "immediately-invoked function expression" (IIFE). An IIFE is a JavaScript design pattern which executes a function immediately after it's defined. This pattern is often used to create a separate scope for variables to avoid polluting the global scope and to encapsulate code.
+
+    // Normaly this is how we write function and call it
+    function hello() {
+      // Your code here
+      console.log("This function is simple dimple Function!");
+    }
+    hello();
+
+    // This is IIFE
+    (function () {
+      // Your code here
+      console.log("This function is immediately invoked!");
+    })();
+  </script>
+</html>

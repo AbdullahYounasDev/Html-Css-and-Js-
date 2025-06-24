@@ -1,0 +1,132 @@
+.profile {
+  width: 60%;
+  padding: 40px 40px;
+  min-height: 100vh;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  display: none;
+}
+#sub_profile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 75%;
+  border-bottom: 1px solid #dbdbdb;
+  padding: 0 25px 56px 25px;
+}
+#profNFB {
+  width: 55%;
+}
+#profEdImg img {
+  width: 170px;
+  height: 170px;
+  border: 2px solid black;
+  border-radius: 50%;
+  object-fit: cover;
+}
+#edProfileText {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+#edProfileText button {
+  font-size: 14px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 10px;
+  background: #dbdbdb;
+}
+#edProfileText h2 {
+  font-size: 20px;
+  font-weight: 400;
+}
+#pFfdiv {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 40px;
+}
+#my_images {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin: 10px;
+}
+#my_images:hover {
+  width: 160px;
+  height: 160px;
+  transition: ease-in-out 0.1s;
+}
+#your_images {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  width: 80%;
+  margin: 20px 0px;
+  flex-wrap: wrap;
+}
+#ed_img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border: 1px solid;
+  border-radius: 50%;
+  position: relative;
+}
+#ei_file {
+  display: none;
+}
+#ed_label {
+  cursor: pointer;
+  padding: 3px;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  font-size: 12px;
+  z-index: 100;
+  background: #9f9f9f1c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-shadow: 0 0 5px black;
+}
+#edit_prof {
+  border: 1px solid rgb(197, 197, 197);
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 350px;
+  text-align: center;
+  background: white;
+  gap: 20px;
+  position: absolute;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 5px 1px;
+  display: none;
+}
+.upMyInp input {
+  font-size: 12px;
+  width: 250px;
+  border-radius: 3px;
+  background-color: rgb(245, 245, 245, 1);
+  padding: 4px 2px;
+  outline: none;
+  border: 1px solid #dfdfdf;
+}
+.upMyBtn button {
+  background-color: #4cb5f9;
+  width: 230px;
+  height: 32px;
+  font-size: 14px;
+  border: none;
+  border-radius: 10px;
+  color: white;
+}

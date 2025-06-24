@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a id="abc">
+        <span class="abc">a</span>
+        <span class="abc">b</span>
+        <span class="abc">c</span> 
+    </a>
+    <a id="xyz">
+        <i class="xyz">x</i>
+        <i class="xyz">y</i>
+        <i class="xyz">z</i>
+    </a>
+
+
+
+    <script>
+        var abc = document.getElementsByClassName("abc");
+        var xyz = document.getElementsByTagName("i");
+        
+        for(var i=0; i<xyz.length; i++){
+            
+            document.write(xyz[i].textContent+"<br>");
+        }
+        </script>
+</body>
+</html>

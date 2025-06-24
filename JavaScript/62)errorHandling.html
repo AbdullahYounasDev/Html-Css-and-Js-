@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        console.log("Fetching Data........")
+        // agr error ajae try catch ka begar to nicha jitna b program hon ga wo ruk jaen ga but in try catch case we can handle error and this will not block other program
+        try {
+            console.log(a)
+        } catch (error) {
+            console.log(error)
+        }
+        console.log("Api Fetched")
+
+        // In try catch you cant use settimeout because it only work on synchrounus programs
+        // But if you want then you need to write first settimeout func and inside this you need to write try catch
+
+        // it cause error
+
+        try {
+            setTimeout(() => {
+                console.log(b)
+            }, 2000);
+        } catch (error) {
+            console.log("I am error as i use settimeout func inside try catch")
+        }
+
+
+        // cant cause error
+        setTimeout(() => {
+            try {
+                console.log(error)
+            } catch (error) {
+                console.log("Hi I am Error but i work becuse i use try catch inside settimeout")
+            }
+        }, 2000);
+    </script>
+</body>
+
+</html>

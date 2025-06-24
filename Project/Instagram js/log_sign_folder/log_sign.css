@@ -1,0 +1,188 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.log_sign_cont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.mob_img {
+  width: 500px;
+  background-image: url(/log_sign_folder/Log-sign/home-phones.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 468.32px 578.15px;
+  height: 581.15px;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.mob_img .mob_imgg {
+  position: absolute;
+  right: 77px;
+  top: 27px;
+  transition: 2s ease-in;
+}
+
+.login_section {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 350px;
+}
+
+.sub_login_sec {
+  border: 1px solid rgb(197, 197, 197);
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.sub_login_sec .text_logo img {
+  width: 175px;
+}
+
+.or_dash {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 90%;
+}
+
+.or_dash .dash {
+  width: 35%;
+  height: 1px;
+  background-color: rgb(197, 197, 197);
+}
+
+.or_dash p {
+  margin: 0;
+  font-size: 12px;
+}
+
+.log_face {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 57%;
+}
+
+.sign_p {
+  border: 1px solid rgb(197, 197, 197);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  font-size: 12px;
+  padding: 20px 0;
+  margin-top: 10px;
+}
+
+.sign_p p {
+  margin: 0;
+}
+
+.sign_p a {
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.get_app {
+  text-align: center;
+  font-size: 14px;
+}
+
+/* sign in sec */
+.sub_signin_sec {
+  border: 1px solid rgb(197, 197, 197);
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 350px;
+  text-align: center;
+}
+
+.sub_signin_sec .text_logo img {
+  width: 175px;
+}
+
+.sigin_para {
+  font-size: 12px;
+  font-weight: 600;
+  color: #737373;
+}
+
+.sigin_para a {
+  text-decoration: none;
+}
+
+.email_pas {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.log_p {
+  border: 1px solid rgb(197, 197, 197);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  font-size: 12px;
+  padding: 20px 20px;
+  width: 350px;
+  margin-top: 10px;
+}
+
+.log_p p {
+  margin: 0;
+}
+
+#signIn {
+  display: none;
+}
+
+.up_p_img {
+  border: 1px solid rgb(197, 197, 197);
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 350px;
+  text-align: center;
+  display: none;
+}
+
+.up_p_img .text_logo img {
+  width: 175px;
+}
+
+.inp_img input {
+  display: none;
+}
+
+#up_img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+}

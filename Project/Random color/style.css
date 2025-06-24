@@ -1,0 +1,39 @@
+*{
+    box-sizing: border-box;
+    font-family: monospace;
+    overflow: hidden;
+}
+body{
+    transition: 2s;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+.sub-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 25px;
+    height: auto;
+    width: 300px;
+    padding: 10px;
+    background-color: white;
+    border: 2px solid brown;
+}
+#btn{
+    border: 2px solid brown;
+    border-radius: 20px;
+    background: brown;
+    color: white;
+    font-weight: 900;
+    cursor: pointer;
+}
+#color-id{
+    margin-left: 10px;
+    font-size: 16px;
+    font-weight: 900;
+}

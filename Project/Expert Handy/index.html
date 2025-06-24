@@ -1,0 +1,436 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Expert Handy Man and Remodeling</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="responsive.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
+  </head>
+  <body>
+    <header>
+      <div class="first-header"
+        ><div>
+          <p>We made your home more quality</p>
+        </div>
+        <div class="icons-div">
+          <i class="icons bi bi-facebook"></i>
+          <i class="icons bi bi-google"></i>
+          <i class="icons bi bi-twitter"></i>
+          <i class="icons bi bi-whatsapp"></i> </div
+      ></div>
+      <div class="second-header">
+        <div class="logo">
+          <h2>AUHANDY</h2>
+          <p>We Repair Everything</p>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#">Pages</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <i class="icons bi bi-search" id="search-icon"></i>
+          </ul>
+        </nav>
+        <div
+          class="mobile-nav-icon"
+          style="display: none"
+          onclick="toggleNav()">
+          <i class="icons bi bi-list" style="font-size: 25px"></i
+        ></div>
+        <div class="mobile-nav">
+          <div class="cross">
+            <i
+              class="icons bi bi-x"
+              onclick="closeNav()"
+              style="font-size: 25px"></i>
+          </div>
+          <nav>
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#projects">Projects</a></li>
+              <li><a href="#">Pages</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#contact">Contact</a></li>
+              <i class="icons bi bi-search" id="search-icon"></i>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <!-- This is use to controll body content gap etc -->
+    <div class="body-cont-controller">
+      <!-- Hero Section -->
+
+      <div>
+        <div class="hero-sec" id="home">
+          <div class="hero-img">
+            <img src="Images/workerone.png" alt="" />
+          </div>
+          <div class="hero-content">
+            <h1>Expert Handyman & Remodeling</h1>
+            <p
+              >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint
+              exercitationem similique</p
+            >
+            <div class="hero-btn">
+              <button class="primary-btn"> Learn More </button>
+              <button class="secondry-btn"> Get Quote </button>
+            </div>
+          </div>
+        </div>
+        <div class="after-hero-sec">
+          <p>We Have 13 Years of Exprereince in Auhandy</p>
+          <button class="primary-btn">
+            <i class="icons bi bi-phone-fill"></i>
+            +1 234 567 89
+          </button>
+        </div>
+      </div>
+      <!-- Services -->
+      <div class="services">
+        <div class="serviceSubOne">
+          <div class="servBorder">
+            <img src="Images/workertwo.jpg" alt="" />
+          </div>
+        </div>
+        <div class="serviceSubTwo">
+          <div class="serv-main-cont">
+            <h1>WHY CHOOSE US</h1>
+            <div class="border-div"></div>
+            <p
+              >Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero
+              repellat, ipsa modi magnam laborum sed. Incidunt tempore dolore
+              possimus velit odio! Totam excepturi</p
+            >
+          </div>
+          <div class="serv-bullets-div">
+            <div class="serv-cont-div">
+              <div class="serv-icon-cont">
+                <div class="icons serv-icons"
+                  ><i class="icons bi bi-gear-fill"></i
+                ></div>
+                <div>
+                  <h4>Easy TO Cutomize</h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing </p>
+                </div>
+              </div>
+              <div class="serv-icon-cont">
+                <div class="icons serv-icons"
+                  ><i class="icons bi bi-chat-fill"></i
+                ></div>
+                <div>
+                  <h4>24/7 Customer Service</h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing</p>
+                </div>
+              </div>
+            </div>
+            <div class="serv-cont-div">
+              <div class="serv-icon-cont">
+                <div class="icons serv-icons"
+                  ><i class="icons bi bi-gift"></i
+                ></div>
+                <div>
+                  <h4>Gift for Loyal Customers</h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing </p>
+                </div>
+              </div>
+              <div class="serv-icon-cont">
+                <div class="icons serv-icons"
+                  ><i class="icons bi bi-heart-fill"></i
+                ></div>
+                <div>
+                  <h4>Favourite Customers</h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Services Two -->
+      <div class="service-two" id="services">
+        <h1 class="text-white">OUR SERVICES</h1>
+        <div class="border-div" style="background-color: white"></div>
+        <div class="services-offered">
+          <div class="serv">
+            <i class="bi bi-gear-fill serv-icon"></i>
+            <h2>Engine Repair</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+          </div>
+          <div class="serv">
+            <i class="bi bi-lightning serv-icon"></i>
+            <h2>Electrical</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+          </div>
+          <div class="serv">
+            <i class="bi bi-droplet-fill serv-icon"></i>
+            <h2>Plumbing</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+          </div>
+          <div class="serv">
+            <i class="bi bi-tools serv-icon"></i>
+            <h2>Repair House</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+          </div>
+        </div>
+        <div class="primary-btn">View All Services</div>
+      </div>
+      <!-- Our Projects -->
+      <div class="our-project" id="projects">
+        <h1>OUR PROJECTS</h1>
+        <div class="border-div"></div>
+        <ul>
+          <li class="text-yellow">All </li>
+          <li>Engine Repair </li>
+          <li>Electrical </li>
+          <li>Plumbing </li>
+          <li>Wall Paint </li>
+        </ul>
+        <div>
+          <div class="head-proj-det">
+            <div class="project-det">
+              <img src="Images/projectsix.jpg" alt="" />
+              <div class="proj-img-hover">
+                <h4 class="text-yellow" style="font-weight: bold"
+                  >Lorem, ipsum dolor.</h4
+                >
+                <p class="text-white" style="font-weight: 600">Repair House</p>
+                <i id="search-icon-two" class="icons bi bi-search"> </i>
+              </div>
+            </div>
+            <div class="project-det">
+              <img src="Images/projectfour.jpg" alt="" />
+              <div class="proj-img-hover">
+                <h4 class="text-yellow" style="font-weight: bold"
+                  >Lorem, ipsum dolor.</h4
+                >
+                <p class="text-white" style="font-weight: 600">Repair House</p>
+                <i id="search-icon-two" class="icons bi bi-search"> </i>
+              </div>
+            </div>
+            <div class="project-det">
+              <img src="Images/projectfive.jpg" alt="" />
+              <div class="proj-img-hover">
+                <h4 class="text-yellow" style="font-weight: bold"
+                  >Lorem, ipsum dolor.</h4
+                >
+                <p class="text-white" style="font-weight: 600">Repair House</p>
+                <i id="search-icon-two" class="icons bi bi-search"> </i>
+              </div>
+            </div>
+          </div>
+          <div class="head-proj-det">
+            <div class="project-det">
+              <img src="Images/projectone.jpg" alt="" />
+              <div class="proj-img-hover">
+                <h4 class="text-yellow" style="font-weight: bold"
+                  >Lorem, ipsum dolor.</h4
+                >
+                <p class="text-white" style="font-weight: 600">Repair House</p>
+                <i id="search-icon-two" class="icons bi bi-search"> </i>
+              </div>
+            </div>
+
+            <div class="project-det">
+              <img src="Images/projecttwo.jpg" alt="" />
+              <div class="proj-img-hover">
+                <h4 class="text-yellow" style="font-weight: bold"
+                  >Lorem, ipsum dolor.</h4
+                >
+                <p class="text-white" style="font-weight: 600">Repair House</p>
+                <i id="search-icon-two" class="icons bi bi-search"> </i>
+              </div>
+            </div>
+            <div class="project-det">
+              <img src="Images/projectthree.jpg" alt="" />
+              <div class="proj-img-hover">
+                <h4 class="text-yellow" style="font-weight: bold"
+                  >Lorem, ipsum dolor.</h4
+                >
+                <p class="text-white" style="font-weight: 600">Repair House</p>
+                <i id="search-icon-two" class="icons bi bi-search"> </i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="primary-btn-two">All Projects</div>
+      </div>
+      <!-- Contact -->
+      <div>
+        <div class="contact-prob" id="contact">
+          <div class="contact-sec">
+            <div class="contact-content" style="align-items: self-start">
+              <h1>You Have Some Problem in Housing?</h1>
+              <button class="primary-btn">
+                <i class="icons bi bi-phone-fill"></i>
+                +1 234 567 89
+              </button>
+            </div>
+            <div class="contact-img">
+              <img src="Images/wrokerthree.png" alt="" />
+            </div>
+          </div>
+        </div>
+        <div class="loc-quote">
+          <div class="loc">
+            <h1>OUR LOCATION</h1>
+            <div class="border-div"></div>
+            <div class="map">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.2647573508114!2d144.9559283153136!3d-37.8162797797516!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0x5045675218ce6e0!2zVmljdG9yaWEgSGFyc291bWFuIFJvYWQsIFBvcnQgTWVsYm91cm5lLCBWSUMgMzAwMCwg0JDQvdC10LrRgdGC0YDQvtGB0YLRjCwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1688889199291!5m2!1sru!2sru"
+                width="450"
+                height="380"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+          </div>
+          <div class="quote">
+            <h1>GET QUOTE</h1>
+            <div class="border-div"></div>
+            <form>
+              <div class="input-div">
+                <input type="text" placeholder="Your Name" />
+                <input type="email" placeholder="Your Email" />
+              </div>
+              <div class="input-div">
+                <input type="text" placeholder="Your Subject" />
+                <input type="number" placeholder="Your Number" />
+              </div>
+              <div class="input-div">
+                <textarea placeholder="Description Service Needed"></textarea>
+              </div>
+              <button class="primary-btn-two">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <!-- Body control end -->
+    </div>
+    <!-- Footer -->
+    <footer>
+      <div class="first-footer">
+        <!-- Footer Contact -->
+        <div class="footer-contact">
+          <h4 style="margin: 20px 0" class="text-white">CONTACT US</h4>
+          <div class="footer-contact-details">
+            <div class="footer-icons-div">
+              <i class="icons bi bi-phone-fill"></i>
+            </div>
+            <div>
+              <h4 class="text-white">+92 345 6789</h4>
+              <p class="text-white">Support 24/7 Weekends</p>
+            </div>
+          </div>
+          <div class="footer-contact-details">
+            <div class="footer-icons-div">
+              <i class="icons bi bi-geo-alt-fill"></i>
+            </div>
+            <p class="text-white">Authandy Tower, America</p>
+          </div>
+          <div class="footer-contact-details">
+            <div class="footer-icons-div">
+              <i class="icons bi bi-envelope"></i>
+            </div>
+            <p class="text-white">info@gmail.com</p>
+          </div>
+          <div class="footer-contact-details">
+            <div class="footer-icons-div">
+              <i class="icons bi bi-clock"></i>
+            </div>
+            <p class="text-white">Weekends: 09:00am - 06:00pm</p>
+          </div>
+        </div>
+        <!-- Footer Services Details -->
+        <div>
+          <h4 style="margin: 20px 0" class="text-white">OUR SERVICES</h4>
+          <div class="footer-serv">
+            <div class="serv-main-div">
+              <div class="serv-div">
+                <i class="icons text-yellow bi bi-caret-right-fill"></i>
+                <p class="text-white"> Electrical</p>
+              </div>
+              <div class="serv-div">
+                <i class="icons text-yellow bi bi-caret-right-fill"></i>
+                <p class="text-white"> Plumbing</p>
+              </div>
+              <div class="serv-div">
+                <i class="icons text-yellow bi bi-caret-right-fill"></i>
+                <p class="text-white"> Engine Repairing</p>
+              </div>
+              <div class="serv-div">
+                <i class="icons text-yellow bi bi-caret-right-fill"></i>
+                <p class="text-white"> Home Mantain</p>
+              </div>
+              <div class="serv-div">
+                <i class="icons text-yellow bi bi-caret-right-fill"></i>
+                <p class="text-white"> Wall Paint</p>
+              </div>
+              <div class="serv-div">
+                <i class="icons text-yellow bi bi-caret-right-fill"></i>
+                <p class="text-white"> Repait House</p>
+              </div>
+            </div>
+            <div class="serv-main-div">
+              <div class="serv-div">
+                <i class="icons text-yellow bi bi-caret-right-fill"></i>
+                <p class="text-white"> Electrical</p>
+              </div>
+              <div class="serv-div">
+                <i class="icons text-yellow bi bi-caret-right-fill"></i>
+                <p class="text-white"> Plumbing</p>
+              </div>
+              <div class="serv-div">
+                <i class="icons text-yellow bi bi-caret-right-fill"></i>
+                <p class="text-white"> Engine Repairing</p>
+              </div>
+              <div class="serv-div">
+                <i class="icons text-yellow bi bi-caret-right-fill"></i>
+                <p class="text-white"> Home Mantain</p>
+              </div>
+              <div class="serv-div">
+                <i class="icons text-yellow bi bi-caret-right-fill"></i>
+                <p class="text-white"> Wall Paint</p>
+              </div>
+              <div class="serv-div">
+                <i class="icons text-yellow bi bi-caret-right-fill"></i>
+                <p class="text-white"> Repait House</p></div
+              >
+            </div>
+          </div>
+        </div>
+        <div class="redeem-part">
+          <div class="redeem-part-first text-white">
+            GET <span class="text-yellow" style="margin: 0 5px"> 25% </span> OFF
+            <br />
+            Electrical Services
+          </div>
+          <br />
+          <br />
+
+          <div class="redeem-part-second text-white">
+            Radeem Code: <span class="text-yellow">123456</span>
+          </div>
+        </div>
+      </div>
+      <!-- Second footer -->
+      <div style="font-size: 13px" class="second-footer">
+        Copyright &copy; 2018
+        <span class="text-yellow" style="font-weight: bold">Auhandy</span>. Get
+        the Theme
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

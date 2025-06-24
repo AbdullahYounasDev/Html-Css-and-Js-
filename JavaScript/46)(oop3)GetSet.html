@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        class car {
+            model = "2023";
+            name = "Fortuner";
+            color = "White";
+            
+            // setter methods
+            setModel(){
+                var a = prompt("Enter Car Model");
+                this.model=a;
+            }
+            setName(){
+                var a = prompt("Enter Car Name");
+                this.name=a;
+            }
+            setColor(){
+                var a = prompt("Enter Car Color");
+                this.color=a;
+            }
+            // Getter Methods
+            getModel(){
+                return this.model;
+            }
+            getName(){
+                return this.name;
+            }
+            getColor(){
+                return this.color;
+            }
+
+            allGet()
+            {
+                document.write(this.model+"-----"+this.name+"-----"+this.color)
+            }
+        }
+        var c1 = new car();
+        c1.setName();
+        c1.setModel();
+        c1.setColor();
+        c1.allGet();
+    </script>
+</body>
+</html>

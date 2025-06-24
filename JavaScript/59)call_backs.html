@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+
+<body></body>
+<script>
+  // Synchronous actions:
+  //  these are actions that we initialize now and finish one by one
+  // Asynchronus actions:
+  //  these are actions that we initialize now and finish later
+  // Call_backs:
+  //  Any function that is passed as an argument to another function so that it can be executed in that other function is called as a callback function
+
+  // example of Synchronus
+  // console.log("Start");
+  // let a = prompt("Hi");
+  // console.log(a);
+  // console.log("End");
+
+  // example of Asynchronus
+  // console.log("Start");
+  // setTimeout(() => {
+  //   console.log("Hi");
+  // }, 3000);
+  // console.log("End");
+
+  // Call Backs
+  let loadScript = (src, callback) => {
+    let script = document.createElement("script");
+    script.src = src;
+    document.head.appendChild(script);
+    script.onload = () => {
+      callback(null, src);
+    };
+    script.onerror = () => {
+      callback(new Error("Error in Loading Script:"), src);
+    };
+  };
+
+  loadScript(
+    "https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrewrewrap.bundle.min.js",
+    (error, nameCdn) => {
+      if (error) {
+        console.log(error);
+      } else {
+        alert("I am Working :" + nameCdn);
+      }
+    }
+  );
+</script>
+
+</html>

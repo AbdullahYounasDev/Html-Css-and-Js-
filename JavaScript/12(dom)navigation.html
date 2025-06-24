@@ -1,0 +1,30 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <div id="container">
+      First
+      <ul id="linkBox">
+        <li class="link">Link1</li>
+        <li class="link">Link2</li>
+        <li class="link">Link3</li>
+      </ul>
+      Last
+    </div>
+
+    <script>
+      var linkBox = document.getElementById("linkBox");
+      console.log(linkBox.parentElement.lastChild.textContent);
+      var link1 = document.getElementsByClassName("link")[1];
+      console.log(link1.previousSibling.previousSibling.textContent);
+    </script>
+  </body>
+</html>

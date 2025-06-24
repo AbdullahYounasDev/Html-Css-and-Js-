@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    let arr = [1, 2, 3];
+    console.log(arr);
+    // the main diffrence bw map and for each loop is that:
+    // map is used to create new array and for-each loop is used to perform operations on array
+    // map may be take three arguments 1st): for value 2nd): for index 3rd):for array
+    let a = arr.map((value, index, array) => {
+        console.log(value, index, array);
+        return value + index
+    })
+    // here we create new array
+    console.log(a)
+
+    // filter method: use to filter
+    let ab = arr.filter((value) => {
+        return value < 3;
+    })
+    console.log(ab)
+    let arr3 = [1, 2, 3, 4, 4, 4, 3];
+    let ac = arr3.reduce((value1, value2) => {
+        return value2 + value1
+    })
+    console.log(ac)
+</script>
+
+</html>

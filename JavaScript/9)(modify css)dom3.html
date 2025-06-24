@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #btn{
+            color: white;
+            background-color: crimson;
+            padding: 8px;
+            font-size: 18px;
+        }
+        .para{
+            font-size: 18px;
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <button id="btn">Click Me</button>
+    <p class="para">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus consequuntur repellat voluptatibus quasi aliquam expedita ipsa nostrum! Odit, velit.</p>
+
+
+
+
+    <script>
+        var btn = document.querySelector("#btn");
+        btn.style.color="black";
+        btn.style.background="aliceBlue";
+        btn.style.border="5px solid red";
+
+        var pa = document.getElementsByTagName("p")[0];
+        pa.style.backgroundColor="Red";
+    </script>
+</body>
+</html>

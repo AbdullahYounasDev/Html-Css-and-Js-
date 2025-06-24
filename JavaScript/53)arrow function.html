@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    let c = {
+        name :"Abdullah Younas",
+        age  : 18,
+        show : function (){
+            setTimeout(()=>{
+                // by using arrow function in event "this" refers attributes from its parent this is called lexica this
+                  console.log(`He is ${this.name} and he is under ${this.age}`)
+            },2000)
+        }
+    }
+    c.show();
+
+    // previous in 52)
+    // let c = {
+    //     name : "Abdullah",
+    //     age : 18,
+    //     show : function (){
+    //         let that = this;
+    //         setTimeout(function(){
+    //         console.log(`He is ${that.name} And He is ${that.age}`); 
+    //         },2000);
+    //     }
+    // }
+    // c.show();
+</script>
+</html>

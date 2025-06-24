@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+    <script>
+        function cat() {
+            this.color = "White"
+            this.name = "Jase"
+            this.price = "20,000"
+        }
+
+        cat.prototype.race = "Persian";
+
+        var c1 = new cat();
+
+        c1.name = "Chosi"
+        console.log(c1.color);
+        console.log(c1.name);
+        console.log(c1.price);
+        console.log(c1.race);
+    </script>
+</body>
+
+</html>

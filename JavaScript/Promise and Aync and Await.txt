@@ -1,0 +1,66 @@
+How Promises Work Asynchronously
+Event Loop and Microtask Queue
+JavaScript is single-threaded, meaning it can only execute one piece of code at a time. However, it can handle asynchronous tasks using an event loop. The event loop works with two main queues: the task queue (also known as the macrotask queue) and the microtask queue.
+
+Task Queue (Macrotask Queue): This queue contains tasks like I/O events, setTimeout callbacks, and other non-urgent events.
+Microtask Queue: This queue contains tasks that need to be executed more urgently, such as promises and other microtasks.
+When the call stack (where currently executing code is) is empty, the event loop first processes all tasks in the microtask queue before moving on to the task queue.
+
+Promises and the Microtask Queue
+Promises in JavaScript are inherently asynchronous because when a promise is resolved or rejected, the .then, .catch, and .finally callbacks are added to the microtask queue. This means that they will be executed after the current synchronous code has finished running but before any tasks in the task queue.
+
+Here's a step-by-step example to illustrate this:
+
+javascript
+Copy code
+console.log('Start');
+
+const promise = new Promise((resolve, reject) => {
+  console.log('Promise executor');
+  resolve('Resolved value');
+});
+
+promise.then((value) => {
+  console.log(value);
+});
+
+console.log('End');
+Execution Steps:
+
+The synchronous code starts executing.
+console.log('Start') runs, printing Start.
+The promise is created, and the executor function is run immediately.
+console.log('Promise executor') runs, printing Promise executor.
+The promise is resolved with 'Resolved value', but the .then callback is placed in the microtask queue.
+console.log('End') runs, printing End.
+The synchronous code finishes, and the event loop checks the microtask queue.
+The .then callback is executed, printing Resolved value.
+async and await
+The async keyword is used to define asynchronous functions. Inside an async function, the await keyword can be used to pause the execution of the function until a promise is resolved or rejected. This makes asynchronous code easier to read and write, resembling synchronous code.
+
+Here's an example:
+
+javascript
+Copy code
+async function fetchData() {
+  console.log('Fetching data...');
+  const response = await fetch('https://api.example.com/data');
+  const data = await response.json();
+  console.log('Data fetched:', data);
+}
+
+console.log('Start');
+fetchData();
+console.log('End');
+Execution Steps:
+
+The synchronous code starts executing.
+console.log('Start') runs, printing Start.
+fetchData is called, but because it's an async function, it starts executing and hits the first await.
+fetch('https://api.example.com/data') returns a promise, and the function pauses.
+console.log('End') runs, printing End.
+Once the promise resolves, fetchData resumes execution, logs Fetching data..., processes the response, and logs Data fetched: ....
+Summary
+Promises: They are asynchronous by design because their callbacks (.then, .catch, .finally) are executed after the current stack is cleared, using the microtask queue.
+async and await: These keywords provide a more readable way to work with promises, allowing you to write asynchronous code that looks synchronous.
+The key takeaway is that the asynchronous nature of promises comes from the event loop and the microtask queue, ensuring that promise callbacks are always executed after the current synchronous code.

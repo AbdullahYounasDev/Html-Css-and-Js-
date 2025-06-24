@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">Click Me</button>
+     <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis vero aut eum reprehenderit cum?</p>
+     <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis vero aut eum reprehenderit cum?</p>
+     
+    <script>
+        // by id
+        document.getElementById("btn").textContent = "Plz Dont't";
+        // by class
+        document.getElementsByClassName("para")[0].textContent = "Plz Dont't";
+        // by tag
+        document.getElementsByTagName("p")[1].textContent="Hi";
+        // by everything
+        document.querySelector(".para").textContent="by";
+        // for all
+        document.querySelectorAll(".para")[1].textContent="by2";
+    </script>
+</body>
+</html>

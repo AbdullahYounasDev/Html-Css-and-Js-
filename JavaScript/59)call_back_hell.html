@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body></body>
+<script>
+    // Call Backs Hell is also called pyramid of DOM
+    // iss ma agr ma cha hun ka aik bar mera loadscript wala function run ho orr uss ma koi error na aye to koi or function b run ho agr uss ma b error na ye to phir koi or function run ho or ya kam 10 bar hu
+    // iss kam ka liya call backs ko use karna buhat muskil ho jata hai or ya cheez readabillity per b asar dality hai iss liya iss ko call backhell kehta hain. e.g ............check this code
+    let loadScript = (src, callback) => {
+        let script = document.createElement("script");
+        script.src = src;
+        document.head.appendChild(script);
+        script.onload = () => {
+            callback(null, src);
+        };
+        script.onerror = () => {
+            callback(new Error("Error in Loading Script:"), src);
+        };
+    };
+
+    loadScript(
+        "https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js",
+        (error, nameCdn) => {
+            if (error) {
+                console.log(error);
+            } else {
+                loadScript(
+                    "https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js",
+                    (error, nameCdn) => {
+                        if (error) {
+                            console.log(error);
+                        } else {
+                            loadScript(
+                                "https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js",
+                                (error, nameCdn) => {
+                                    if (error) {
+                                        console.log(error);
+                                    } else {
+                                        loadScript(
+                                            "https://cdn.jsdelivr.net/npm/bootstrap@5.2.4/dist/js/bootstrap.bundle.min.js",
+                                            (error, nameCdn) => {
+                                                if (error) {
+                                                    console.log(error);
+                                                } else {
+                                                    alert("I am Working :" + nameCdn);
+                                                }
+                                            }
+                                        );
+                                    }
+                                }
+                            );
+                        }
+                    }
+                );
+            }
+        }
+    );
+</script>
+
+</html>

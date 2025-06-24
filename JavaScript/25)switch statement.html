@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var trafficLights = prompt("Enter color of light", "e.g red");
+        switch (trafficLights) {
+            case "red":
+                document.write("Stop!");
+                break;
+            case "yellow":
+                document.write("ready!");
+                break;
+            case "green":
+                document.write("go!");
+                break;
+            default:
+                document.write("nothing was matched!");
+                break;
+        }
+    </script>
+</body>
+
+</html>

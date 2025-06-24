@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class cat{
+            color;
+            price;
+            type;
+            constructor(catColor, catPrice, catType)
+            {
+                this.color = catColor;
+                this.price = catPrice;
+                this.type = catType;
+            }
+            out(){
+                console.log(this.color+"---"+this.price+"---"+this.type)
+            }
+
+        }
+        var c1 = new cat("White", "20,000", "Persian");
+        c1.out();
+    </script>
+</body>
+</html>

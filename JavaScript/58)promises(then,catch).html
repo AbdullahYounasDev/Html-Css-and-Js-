@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+</body>
+<script>
+    console.log("I am in pending")
+    let p1 = new Promise((reslove,reject)=>{
+        setTimeout(() => {
+            reslove(true);
+        }, 5000);
+    })
+    let p2 = new Promise((reslove,reject)=>{
+        setTimeout(() => {
+            reject(new Error("I am Error"));
+        }, 5000);
+    })
+
+    // to get value:
+    p1.then((value)=>{
+        console.log(value)
+    })
+
+    // to catch error:
+    // p2.catch((error)=>{
+    //     console.log("Some Error Occur")
+    // })
+
+    // For both:if p2 give value then there will be value in console or if it give error then there will be error
+    p2.then((value)=>{
+        console.log(value)
+    },(error)=>{
+        console.log(error)
+    })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // let c = new Promise((reject,reslove)=>{
+    //     console.log("Your order is in pending for 5s");
+    //     setTimeout(() => {
+    //         console.log("Your order will not completed");
+    //         reject(new Error("I am error"));
+    //     }, 5000);
+    // })
+    
+    // p.then((value)=>{
+    //     console.log(value);
+    // })
+    // c.catch((error)=>{
+    //     console.log("Error occur in c")
+    // })
+</script>
+</html>

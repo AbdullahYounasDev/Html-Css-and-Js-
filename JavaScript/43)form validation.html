@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            font-family: sans-serif;
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 100%;
+            height: 100px;
+            overflow: hidden;
+        }
+
+        .form h1 {
+            color: white;
+            margin-top: 10px;
+            font-weight: 900;
+
+        }
+
+        .form {
+            width: 500px;
+            height: 500px;
+            border: 2px solid black;
+            background-color: rgb(34, 34, 34);
+            border-radius: 35%;
+            margin: auto;
+            text-align: center;
+        }
+
+        .sub-form {
+            width: 100%;
+            height: 70%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .form-input {
+            width: 80%;
+            height: 48px;
+            font-size: 16px;
+            color: black;
+            border-radius: 30px;
+            padding: 7px;
+            border: 2px solid black;
+            background: #00000005;
+            color: white;
+        }
+
+        .form-input::placeholder {
+            color: whitesmoke;
+        }
+
+        .form-btn {
+            width: 40%;
+            color: whitesmoke;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="" class="form">
+        <h1 class="form-heading">Login</h1>
+        <div class="sub-form">
+            <input type="text" class="form-input" placeholder="Name"><br>
+            <input type="phone" class="form-input" placeholder="Phone No"><br>
+            <input type="Email" class="form-input" placeholder="Email"><br>
+            <input type="button" class="form-input form-btn" value="login">
+        </div>
+    </form>
+
+
+    <script>
+        var btn = document.getElementsByClassName("form-btn")[0];
+        var input = document.getElementsByClassName("form-input");
+        btn.onclick = function () {
+            var regexAlpha = /^[a-zA-Z]+$/;
+            var regexPhone = /^\d{11}$/;
+            var regexEmail = /^\S+@\S+\.\S+$/;
+
+
+            if (input[0].value == "" || input[2].value == "" || input[3].value == "") {
+                alert("Fill All fields");
+            }
+
+            else if (input[0].value.match(regexAlpha) && input[1].value.match(regexPhone) && input[2].value.match(regexEmail)) {
+                alert("EveryThing is written Correctly")
+            }
+
+            else {
+                alert("EveryThing must b filled rightly")
+            }
+        }
+    </script>
+</body>
+
+</html>

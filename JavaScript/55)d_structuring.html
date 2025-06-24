@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hi i Am Abdullah Younas</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    //D-Structuring : is JavaScript expression that makes it possible to unpack values from arrays, or properties from objects, into distinct variables. 
+    // use in unpacking maps, arrays and objects etc
+
+    // previously we create array and get elements from array like this:
+    // let bbb = [0,1,2];
+    // let  we = arr[0];
+    // let  wbe = arr[1];
+    // console.log(we)
+
+    // BUT d-structuring make it simple
+
+    // 1.for arrays
+
+    let arr = [0, 2, 3, 4, 5, 6, 7];
+    // let [a,b,c,d, ...Hi] = arr;
+    // console.log(a,b,c,d, Hi)
+
+    // if we want to print 0 and 4,5,6,7 then:
+    let [a, b, , ...Hi] = arr;
+    console.log(a, Hi);
+
+    // 2. for objects
+
+    let obj = {
+        h: 1,
+        j: 2
+    };
+    let { h, j } = obj;
+    console.log(h, j)
+
+    // 2nd method for object
+    let { k, l } = { k: 1, l: 2 };
+    console.log(k, l);
+
+</script>
+
+</html>

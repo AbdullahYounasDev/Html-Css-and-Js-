@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Note Pad</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      width: 100%;
+      height: auto;
+      min-height: 100vh;
+      background-color: #ab79e9;
+    }
+
+    #sub-container {
+      width: 400px;
+      height: auto;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      background-color: white;
+      align-items: center;
+      border-radius: 10px;
+      padding: 20px;
+      margin: 10px 0;
+    }
+
+    h1 {
+      color: #ab79e9;
+      margin-bottom: 10px;
+      font-size: 30px;
+      font-weight: 500;
+    }
+
+    #txt-btn {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border: 2px solid #ab79e9;
+      border-radius: 25px;
+      width: 300px;
+      padding: 4px;
+    }
+
+    input {
+      width: 200px;
+      padding: 10px;
+      border-radius: 25px 0 0 25px;
+      font-size: 14px;
+      font-weight: 500;
+      background: none;
+      border: none;
+      color: black;
+      outline: none;
+    }
+
+    #btn {
+      width: 70px;
+      padding: 10px;
+      border-radius: 0 25px 25px 0;
+      background: #ab79e9;
+      color: white;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+    }
+
+    p {
+      margin-top: 10px;
+      padding: 10px;
+      width: auto;
+      min-width: 300px;
+      border-radius: 25px;
+      border: 2px solid #ab79e9;
+      color: black;
+      font-weight: 500;
+      box-sizing: border-box;
+      margin-bottom: 4px;
+    }
+
+    #cross {
+      width: 50px;
+      border: none;
+      background: #ab79e9;
+      border-radius: 25px;
+      color: white;
+      font-size: 14px;
+      font-weight: 600;
+      text-align: center;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div id="sub-container">
+      <h1>Todo List</h1>
+      <div id="txt-btn">
+        <div id="txt">
+          <input type="text" placeholder="Write Something Here..." id="inp" />
+        </div>
+        <div id="buttonDiv"><button id="btn">Add</button></div>
+      </div>
+    </div>
+  </div>
+</body>
+
+<script>
+  let inp = document.getElementById("inp");
+  let btn = document.getElementById("btn");
+  let subCont = document.getElementById("sub-container");
+  let val = inp.value;
+
+  btn.onclick = function () {
+    let btnDiv = document.createElement("div")
+    let p = document.createElement("p");
+    let cross = document.createElement("button");
+    cross.id = "cross";
+    btnDiv.className = "btnDiv"
+    if (inp.value) {
+      btnDiv.appendChild(p);
+      btnDiv.appendChild(cross);
+      subCont.appendChild(btnDiv);
+      p.innerText = inp.value;
+      cross.innerText = "x";
+      cross.onclick = function (e) {
+        btnDiv.remove(e.target)
+        console.log(e)
+      };
+    } else {
+      alert("Enter Something");
+    }
+  };
+</script>
+
+</html>

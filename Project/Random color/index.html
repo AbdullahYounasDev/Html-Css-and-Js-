@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+     <div class="sub-container">
+        <div id="color-id">Welcome</div>
+        <button id="btn">Click Me!</button>
+    </div>   
+    </div>
+
+    <script>
+        const colorID = document.getElementById("color-id");
+        const btn = document.getElementById("btn");
+        const container = document.getElementById("container");
+        const getColor = () => {
+             const colorNo = Math.floor(Math.random() * 16777215);
+             const colorHi = "#" + colorNo.toString(16);
+             document.body.style.backgroundColor = colorHi;
+             colorID.innerText = colorHi;
+        }
+        btn.addEventListener(
+            "click",
+            getColor
+        )
+        getColor();
+    </script>
+</body>
+</html>

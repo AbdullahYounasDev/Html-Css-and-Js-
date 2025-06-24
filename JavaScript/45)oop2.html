@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Bike{
+            color = "Red";
+            model = "Honda 125";
+
+            get(){
+                return this.model;
+            }
+        }
+        var bike1 = new Bike();
+        bike1.color = "Black";
+        console.log(bike1.get());
+    </script>
+</body>
+</html>
